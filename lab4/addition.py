@@ -1,12 +1,6 @@
-a = str(input("enter first binary no = "))
-b = str(input("enter the binary no = "))
-
-print(f"first binary  = {a}, second binary = {b}")
-
-j = -1
 def addition(a,b):
-    a = a.zfill(8)
-    b = b.zfill(8)
+    a = a.zfill(5)
+    b = b.zfill(5)
 
     # print(f"a ={a}, b = {b}")
 
@@ -43,6 +37,4 @@ def addition(a,b):
         return  str(carry) + result
     else:
         return result
-
-print(addition(a,b))
 

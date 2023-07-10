@@ -1,14 +1,6 @@
-a = str(input("enter first binary no = "))
-b = str(input("enter the binary no = "))
-
-print(f"first binary  = {a}, second binary = {b}")
-
-j = -1
 def addition(a,b):
-    a = a.zfill(8)
-    b = b.zfill(8)
-
-    # print(f"a ={a}, b = {b}")
+    a = a.zfill(5)
+    b = b.zfill(5)
 
     l = len(b)
     temp_sum = 0 
@@ -44,5 +36,20 @@ def addition(a,b):
     else:
         return result
 
-print(addition(a,b))
+def two_s_comp(a):
+    a = a.replace('1','*')
+    a = a.replace('0','1')
+    a = a.replace('*','0')
+
+    a = addition(a, '1')
+
+    return a
+
+def subtraction(a,b):
+    a = a.zfill(5)
+    b = b.zfill(5)
+    b = two_s_comp(b)
+    return (addition(a,b))
+
+
 
